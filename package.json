@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "react-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-test"
   },
   "browserslist": [
     ">0.2%",
@@ -25,7 +25,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://djziu.github.io/react-app",
+  "homepage": "https://djziu.github.io/react-test",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
