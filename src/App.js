@@ -44,19 +44,17 @@ _callApi = () =>{
   _renderMovies = () => {
 
    const movies = this.state.movies.map(( movie ,index, movies ) =>  {
-      return  <Movie title = {movie.title} poster = {movie.medium_cover_image} key={movie.id}  genres = {movie.genres}  />
+      return  <Movie title = {movie.title} 
+               poster = {movie.medium_cover_image} key={movie.id}  genres = {movie.genres}  synopsis ={movie.synopsis} />
      } )
      return movies
   }
 
 
 
-
-
-
   render() {
     return (
-      <div className="App">
+      <div  className= {this.state.movies ? "App" : "App--loading"}>
        {this.state.movies ? this._renderMovies() : "loading"}
       </div>
     )

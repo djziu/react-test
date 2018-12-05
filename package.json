@@ -1,32 +1,25 @@
 {
-  "name": "react-test",
+  "name": "react_test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-lines-ellipsis": "^0.7.3",
+    "react-scripts": "1.0.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+ "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-test"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "homepage": "https://djziu.github.io/react-test",
+  "homepage": "https://djziu.github.io/react-test/",
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^1.2.0",
+    "push-dir": "^0.4.1"
   }
 }

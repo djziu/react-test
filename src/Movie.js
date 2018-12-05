@@ -1,30 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Movie.css';
+import LinesEllipsis from 'react-lines-ellipsis'
 
-function Movie({title, poster, genres}){
+function Movie({title, poster, genres, synopsis}){
    return(
-    <div className="movie">
-            <div className ="movie_columns">
+    <div className="Movie">
+            <div className="Movie__Column">
                  <MoviePoster poster={poster} />
             </div>
-            <div className ="movie_columns"> <h1>{title}</h1>
-            <h1>{genres.map( (genre,index) => <MovieGenre genre ={genre} /> ) }  </h1></div>
-           
+            <div className="Movie__Column"> 
+                <h1>{title}</h1>
+                <div className="Movie__Genres">
+                    {genres.map( (genre,index) => <MovieGenre genre ={genre}  key={index}/> ) } 
+                </div>
+                <div className="Movie_Synopsis">
+                            <LinesEllipsis text ={synopsis} maxLine='3' ellipsis ="..." trimRight basedOn='letters'/>
+                </div>
+            </div> 
             
      </div>
    )
 }
 
 
+
+
 function MoviePoster({poster}){
     return(
-        <img alt={poster} src ={poster}></img>
+        <img alt={poster} src ={poster} className="Movie__Poster" ></img>
     )
 }
 
 function MovieGenre({genre}){
-    return (<span className ="movie_columns">{genre}</span>)
+    return (<span className="Movie__Genre">{genre}</span>)
 }
 
 Movie.propTypes ={
