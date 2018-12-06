@@ -12,7 +12,10 @@ function Movie({title, poster, genres, synopsis}){
             <div className="Movie__Column"> 
                 <h1>{title}</h1>
                 <div className="Movie__Genres">
-                    {genres.map( (genre,index) => <MovieGenre genre ={genre}  key={index}/> ) } 
+
+                    { genres ?  genres.map( (genre,index) => <MovieGenre genre ={genre}  key={index}/> )  : ""
+                 
+                    } 
                 </div>
                 <div className="Movie_Synopsis">
                             <LinesEllipsis text ={synopsis} maxLine='3' ellipsis ="..." trimRight basedOn='letters'/>
